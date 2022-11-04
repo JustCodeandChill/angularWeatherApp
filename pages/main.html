@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  main {{a}}
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Search</label>
+    <input type="text" name="" id="" value="doe" />
+    <h3>SEarch results</h3>
+    <div class="list-group">
+      <!--<search-result person-name="{{ person.name }}" person-age="{{person.age}}"></search-result>-->
+      <search-result
+        ng-repeat="person in people"
+        person-object="person"
+        format-function="formatFunction(aperson)"
+      ></search-result>
+    </div>
+  </body>
 </html>
